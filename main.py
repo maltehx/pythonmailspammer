@@ -3,26 +3,15 @@ import time
 from email.mime.multipart import MIMEMultipart
 from email.mime.text import MIMEText
 
-value = 0
-username = ""
-password = ""
-mail_sender = ""
-mail_receiver = ""
-mail_subj = ""
-mail_text = ""
+value = 3
+username = "YOUR EMAIL"
+password = "YOUR PASSWORD"
+mail_from = username
+mail_to = "MAIL RECEIVER"
+mail_subject = "MAIL SUBJECT"
+mail_body = "MAIL TEXT"
 
-print("Mail spammer  -  github/maltehx")
-print("Mail Username: ")
-input(username)
-print("Mail password:")
-input(password)
-
-username = ""
-password = ""
-mail_from = ""
-mail_to = ""
-mail_subject = ""
-mail_body = ""
+print("Mail spammer - github/maltehx")
 
 mimemsg = MIMEMultipart()
 mimemsg['From'] = mail_from
@@ -31,7 +20,7 @@ mimemsg['Subject'] = mail_subject
 mimemsg.attach(MIMEText(mail_body, 'plain'))
 connection = smtplib.SMTP(host='smtp.gmail.com', port=587)
 connection.starttls()
-connection.login(username, "")
+connection.login(username, password)
 for x in range(value):
     connection.send_message(mimemsg)
     print("sent!")
