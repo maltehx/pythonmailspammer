@@ -1,6 +1,8 @@
 # pythonmailspammer
 Simple E-Mail spammer written in Python. Currently only working with Gmail.
 
+*Now using input per terminal!*
+
 ## Help
 
 If you get an error like 
